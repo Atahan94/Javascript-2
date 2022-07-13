@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Document</title>
+    </head>
+    <body>
+        <div class="header"></div>
+        <section id="container">
+            <ul>
+                <li class="first">One</li>
+                <li class="Second">Two</li>
+                <li class="Third">Three</li>
+            </ul>
+            <ol>
+                <li class="first">One</li>
+                <li class="Second">Two</li>
+                <li class="Third">Three</li>
+            </ol>
+        </section>
+        <div class="footer"></div>
+        <script>
+           /*1*/ let section = document.getElementById("container");
+            //console.log(section);
+            
+           /*2*/ let seconds = document.getElementsByClassName("Second");
+           //console.log(seconds);
+
+           /*3*/ let thirdOl = document.querySelector("#container > ol > .Third");
+           //console.log(thirdOl);
+
+           /*4*/ section.innerHTML += "Hello";
+                 section.append 
+           
+           /*5*/ let newElement = document.createElement("li");
+                 let list = document.querySelector("#container > ul");
+                 newElement.innerHTML = "fourth";
+                 list.appendChild(newElement);  
+
+           /*6*/ let lie = document.querySelector("#container > ul").getElementsByTagName("li"); 
+              // difference between Quaryselector, QuaryselectorAll and GetElements functions 
+                 for(let i = 0; i<lie.length; i++) // also with foreach loop we cannot acess style atrribute
+                 {
+                    lie[i].style.backgroundColor = "green";
+                 };
+
+           /*7*/ document.querySelector(".footer").remove();
+
+           /*8*/ let newEl = document.createElement("div");
+                 document.body.appendChild(newEl);
+                 newEl.classList.add("main");
+
+           /*9*/ document.querySelector(".main").removeAttribute(".main");
+
+
+           /*10*/ let hea = document.querySelector(".header");
+                  hea.classList.toggle("header");
+
+
+
+                                                 
+                 
+                 
+                 
+           
+            
+
+            
+        </script>
+    </body>
+</html>
